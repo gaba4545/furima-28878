@@ -7,7 +7,9 @@
 | nickname      | string | null: false |
 | email         | string | null: false |
 | password      | string | null: false |
-| name_zennkaku | string | null: false |
+| surname_zenkaku | string | null: false |
+| name_zenkaku | string | null: false |
+| surname_katakana | string | null: false |
 | name_katakana | string | null: false |
 | address       | string | null: false |
 | birthday      | string | null: false |
@@ -20,17 +22,17 @@
 
 ## items テーブル
 
-| Column           | Type   | Options     |
-| ---------------- | ------ | ----------- |
-| image            | string | null: false |
-| name             | string | null: false |
-| price            | string | null: false |
-| item_explanation | string | null: false |
-| category         | string | null: false |
-| status           | string | null: false |
-| 発送料            | string | null: false |
-| 発送元の地域       | string | null: false |
-| 発送までの日数      | string | null: false |
+| Column               | Type   | Options     |
+| -------------------- | ------ | ----------- |
+| image                | string | null: false |
+| name                 | string | null: false |
+| price                | string | null: false |
+| item_explanation     | string | null: false |
+| category             | string | null: false |
+| status               | string | null: false |
+| shipping charges     | string | null: false |
+| shipping origin area | string | null: false |
+| days until shipping  | string | null: false |
 
 ### Association
 
@@ -39,17 +41,14 @@
 
 ## purchase_items テーブル
 
-| Column         | Type    | Option   |
-| --------------- | ------ | ----------- |
-| カード情報        | string | null: false |
-| 有効期限          | string | null: false |
-| セキュリティコード | string | null: false |
-| 郵便番号          | string | null: false |
-| 都道府県          | string | null: false |
-| 市区町村          | string | null: false |
-| 番地             | string | null: false |
-| 電話番号          | string | null: false |
-| user_id          | string | null: false |
+| Column       | Type   | Option      |
+| ------------ | ------ | ----------- |
+| postal code  | string | null: false |
+| prefecture   | string | null: false |
+| municipality | string | null: false |
+| address      | string | null: false |
+| phone number | string | null: false |
+| user_id      | string | null: false |
 
 ### Association
 
