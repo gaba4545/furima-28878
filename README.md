@@ -24,8 +24,8 @@
 | Column                  | Type    | Options     |
 | ----------------------- | ------- | ----------- |
 | name                    | string  | null: false |
-| price                   | string  | null: false |
-| item_explanation        | text    | null: false |
+| price                   | integer | null: false |
+| explanation             | text    | null: false |
 | category_id             | integer | null: false |
 | status_id               | integer | null: false |
 | shipping charges_id     | integer | null: false |
@@ -36,18 +36,18 @@
 ### Association
 
 - belongs_to :user
-- has_one :purchase_historyy
+- has_one :purchase_history
 
 ## purchase_items テーブル
 
-| Column           | Type   | Option      |
-| ---------------- | ------ | ----------- |
-| postal code      | string | null: false |
-| municipality     | string | null: false |
-| building number  | string | null: false |
-| address          | string | null: false |
-| phone number     | string | null: false |
-| user_id          | string | null: false |
+| Column           | Type    | Option      |
+| ---------------- | ------- | ----------- |
+| postal code      | integer | null: false |
+| municipality     | integer | null: false |
+| building number  | string  | null: false |
+| address          | string  | null: false |
+| phone number     | string  | null: false |
+| user_id          | string  | null: false |
 | purchase_history | integer | null: false , foreginkey:true |
 
 ### Association
@@ -56,10 +56,10 @@
 
 ## purchase_histories テーブル
 
-| Column            | Type   | Options     |
-| ----------------- | ------ | ----------- |
-| purchase_items_id | string | null: false |
-| users_id          | string | null: false |
+| Column   | Type   | Options     |
+| -------- | ------ | ----------- |
+| item_id  | string | null: false |
+| users_id | string | null: false |
 
 ### Association
 
