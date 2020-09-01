@@ -18,26 +18,24 @@
 
 - has_many :items
 - has_many :purchase_items
-- has_many :purchase_histories
 
 ## items テーブル
 
-| Column               | Type    | Options     |
-| -------------------- | ------- | ----------- |
-| image                | string  | null: false |
-| name                 | string  | null: false |
-| price                | string  | null: false |
-| item_explanation     | text    | null: false |
-| category             | integer | null: false |
-| status               | integer | null: false |
-| shipping charges     | integer | null: false |
-| shipping origin area | integer | null: false |
-| days until shipping  | integer | null: false |
+| Column                  | Type    | Options     |
+| ----------------------- | ------- | ----------- |
+| image                   | string  | null: false |
+| name                    | string  | null: false |
+| price                   | string  | null: false |
+| item_explanation        | text    | null: false |
+| category_id             | integer | null: false |
+| status_id               | integer | null: false |
+| shipping charges_id     | integer | null: false |
+| shipping origin area_id | integer | null: false |
+| days until shipping     | integer | null: false |
 
 ### Association
 
 - belongs_to :user
-- has_one :purchase_history
 
 ## purchase_items テーブル
 
@@ -54,15 +52,3 @@
 ### Association
 
 - belongs_to :user
-
-## purchase_histories テーブル
-
-| Column            | Type    | Options     |
-| ----------------- | ------- | ----------- |
-| purchase_items_id | integer | null: false |
-| users_id          | integer | null: false |
-
-### Association
-
-- belongs_to :user
-- has_one :purchase_item
