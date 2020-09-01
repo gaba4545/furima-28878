@@ -11,19 +11,18 @@
 | name_zenkaku     | string | null: false |
 | surname_katakana | string | null: false |
 | name_katakana    | string | null: false |
-| address          | string | null: false |
 | birthday         | date   | null: false |
 
 ### Association
 
 - has_many :items
 - has_many :purchase_items
+- has_many :purchase_histories
 
 ## items テーブル
 
 | Column                  | Type    | Options     |
 | ----------------------- | ------- | ----------- |
-| image                   | string  | null: false |
 | name                    | string  | null: false |
 | price                   | string  | null: false |
 | item_explanation        | text    | null: false |
@@ -33,9 +32,11 @@
 | shipping origin area_id | integer | null: false |
 | days until shipping     | integer | null: false |
 
+
 ### Association
 
 - belongs_to :user
+- has_one :purchase_historie
 
 ## purchase_items テーブル
 
@@ -52,3 +53,15 @@
 ### Association
 
 - belongs_to :user
+
+## purchase_histories テーブル
+
+| Column            | Type   | Options     |
+| ----------------- | ------ | ----------- |
+| purchase_items_id | string | null: false |
+| users_id          | string | null: false |
+
+### Association
+
+- belongs_to :user
+- has_one :purchase_item
