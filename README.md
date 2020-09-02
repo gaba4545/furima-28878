@@ -28,9 +28,10 @@
 | explanation             | text    | null: false |
 | category_id             | integer | null: false |
 | status_id               | integer | null: false |
-| shipping-charges_id     | integer | null: false |
-| shipping-origin-area_id | integer | null: false |
-| days-until-shipping     | integer | null: false |
+| shipping_charges_id     | integer | null: false |
+| shipping_origin_area_id | integer | null: false |
+| days_until_shipping     | integer | null: false |
+| user_id                 | string  | null: false |
 
 
 ### Association
@@ -42,12 +43,11 @@
 
 | Column           | Type    | Option      |
 | ---------------- | ------- | ----------- |
-| postal-code      | integer | null: false |
+| postal_code      | string  | null: false |
 | municipality     | integer | null: false |
-| building-number  | string  | null: false |
+| building_number  | string  | null: false |
 | address          | string  | null: false |
-| phone-number     | string  | null: false |
-| user_id          | string  | null: false |
+| phone_number     | string  | null: false |
 | purchase_history | integer | null: false , foreginkey:true |
 
 ### Association
@@ -58,10 +58,11 @@
 
 | Column   | Type   | Options     |
 | -------- | ------ | ----------- |
-| item_id  | string | null: false |
-| users_id | string | null: false |
+| item_id  | integer | null: false |
+| users_id | integer | null: false |
 
 ### Association
 
 - belongs_to :user
 - has_one :purchase_item
+- belong_to :item
