@@ -16,7 +16,6 @@
 ### Association
 
 - has_many :items
-- has_many :purchase_items
 - has_many :purchase_histories
 
 ## items テーブル
@@ -31,7 +30,7 @@
 | shipping_charges_id     | integer | null: false |
 | shipping_origin_area_id | integer | null: false |
 | days_until_shipping     | integer | null: false |
-| user_id                 | integer | null: false |
+| user_id                 | integer | null: false , foreign_key: true |
 
 
 ### Association
@@ -52,8 +51,7 @@
 
 ### Association
 
-- belongs_to :user
-- purchase_history
+- has_one :purchase_history
 
 ## purchase_histories テーブル
 
@@ -65,5 +63,5 @@
 ### Association
 
 - belongs_to :user
-- has_one :purchase_item
+- has_one :addresses
 - belong_to :item
