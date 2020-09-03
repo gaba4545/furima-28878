@@ -41,26 +41,26 @@
 
 ## purchase_items テーブル
 
-| Column           | Type    | Option      |
-| ---------------- | ------- | ----------- |
-| postal_code      | string  | null: false |
-| municipality     | integer | null: false |
-| building_number  | string  |
-| address          | string  | null: false |
-| phone_number     | string  | null: false |
-| purchase_history | integer | null: false , foreginkey:true |
+| Column              | Type    | Option      |
+| ------------------- | ------- | ----------- |
+| postal_code         | string  | null: false |
+| municipality        | integer | null: false |
+| building_number     | string  |
+| address             | string  | null: false |
+| phone_number        | string  | null: false |
+| purchase_history_id | integer | null: false , foreign_key: true |
 
 ### Association
 
 - belongs_to :user
+- purchase_history
 
 ## purchase_histories テーブル
 
 | Column        | Type    | Options     |
 | ------------- | ------- | ----------- |
-| item_id       | integer | null: false |
-| user_id       | integer | null: false |
-| purchase_item | integer | null: false |
+| item_id       | integer | null: false , foreign_key: true |
+| user_id       | integer | null: false , foreign_key: true |
 
 ### Association
 
