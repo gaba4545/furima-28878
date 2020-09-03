@@ -31,7 +31,7 @@
 | shipping_charges_id     | integer | null: false |
 | shipping_origin_area_id | integer | null: false |
 | days_until_shipping     | integer | null: false |
-| user_id                 | string  | null: false |
+| user_id                 | integer | null: false |
 
 
 ### Association
@@ -45,7 +45,7 @@
 | ---------------- | ------- | ----------- |
 | postal_code      | string  | null: false |
 | municipality     | integer | null: false |
-| building_number  | string  | null: false |
+| building_number  | string  |
 | address          | string  | null: false |
 | phone_number     | string  | null: false |
 | purchase_history | integer | null: false , foreginkey:true |
@@ -56,10 +56,11 @@
 
 ## purchase_histories テーブル
 
-| Column   | Type   | Options     |
-| -------- | ------ | ----------- |
-| item_id  | integer | null: false |
-| users_id | integer | null: false |
+| Column        | Type    | Options     |
+| ------------- | ------- | ----------- |
+| item_id       | integer | null: false |
+| user_id       | integer | null: false |
+| purchase_item | integer | null: false |
 
 ### Association
 
