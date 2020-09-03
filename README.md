@@ -39,7 +39,7 @@
 - belongs_to :user
 - has_one :purchase_history
 
-## purchase_items テーブル
+## addresses テーブル
 
 | Column              | Type    | Option      |
 | ------------------- | ------- | ----------- |
