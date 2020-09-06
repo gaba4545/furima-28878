@@ -37,8 +37,6 @@ describe User do
       end
       it "passwordが5文字以下は登録できない" do
       end
-      it "passwordが存在してもpassword_confirmationが空では登録できない" do
-      end
     end
   end
 end
