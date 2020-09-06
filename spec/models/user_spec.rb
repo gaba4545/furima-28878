@@ -20,6 +20,12 @@ describe User do
       end
       it "passwordが6文字以上であれば登録できる" do
       end
+      it "surname_zenkakuとname_zenkakuがそれぞれ必須である"
+      end
+      it "surname_katakanaとname_katakanaでそれぞれ必須である"
+      end
+      it "birthdayが必須であること"
+      end
     end
 
     context '新規登録がうまくいかないとき' do
@@ -36,6 +42,12 @@ describe User do
       it "passwordが半角英数字混合でない" do
       end
       it "passwordが5文字以下は登録できない" do
+      end
+      it "surname_zenkakuとname_zenkakuがそれぞれ正しく登録できていない"
+      end
+      it "surname_katakanaとname_katakanaがそれぞれ正しく登録できていない"
+      end
+      it "birthdayが登録できていない"
       end
     end
   end
