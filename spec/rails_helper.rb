@@ -40,6 +40,10 @@ RSpec.configure do |config|
   # examples within a transaction, remove the following line or assign false
   # instead of true.
   config.use_transactional_fixtures = true
+  config.include Devise::Test::IntegrationHelpers, type: :feature
+  config.include FactoryBot::Syntax::Methods
+  Capybara.javascript_driver = :poltergeist
+  Capybara.server = :puma
 
   # You can uncomment this line to turn off ActiveRecord support entirely.
   # config.use_active_record = false
@@ -56,7 +60,7 @@ RSpec.configure do |config|
   #     end
   #
   # The different available types are documented in the features, such as in
-  # https://relishapp.com/rspec/rspec-rails/docs
+  # https://relishapp.com/rspec/rspec-rails/docsございました
   config.infer_spec_type_from_file_location!
 
   # Filter lines from Rails gems in backtraces.
