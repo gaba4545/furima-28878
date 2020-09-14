@@ -60,3 +60,11 @@ end
 group :production do
   gem 'rails_12factor'
 end
+
+gem 'devise'
+gem 'rspec-rails', '~> 4.0.0'
+gem 'factory_bot_rails'
+gem 'pry-rails'
+gem 'rails-i18n'
+gem 'rubocop'
+gem 'rubocop-rails'
