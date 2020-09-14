@@ -2,11 +2,11 @@ FactoryBot.define do
   factory :user do
     nickname              {"abe"}
     email                 {"kkk@gmail.com"}
-    password              {"00000000"}
-    surname_zenkaku       {"AA"}
-    name_zenkaku          {"II"}
-    surname_katakana      {"aa"}
-    name_katakana         {"ii"}
+    password              {"abcd0000"}
+    surname_zenkaku       {"田中"}
+    name_zenkaku          {"角栄"}
+    surname_katakana      {"タナカ"}
+    name_katakana         {"カクエイ"}
     birthday              {"YYYY-MM-DD"}
   end
 end

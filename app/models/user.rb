@@ -2,8 +2,8 @@ class User < ApplicationRecord
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :validatable
 
-          #名前、email、パスワードと再確認、生年月日が存在する
-          validates :nickname,:email, :password, :password_confirmation, :birthday, presence: true
+          #名前、全角苗字と名前、カタカナ苗字と名前、email、パスワードと再確認、生年月日が存在する
+          validates :nickname,:surname_zenkaku,:name_zenkaku,:surname_katakana,:name_katakana,:email, :password, :password_confirmation, :birthday, presence: true
           #パスワードが6文字以上
           validates :password, :password_confirmation,    length: {minimum:6}
           #email一意性
