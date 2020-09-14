@@ -33,7 +33,7 @@ describe User, type: :model do
 
 
 
-    context '新規登録がうまくいかない時' do
+    ]context '新規登録がうまくいかない時' do
       it "nicknameが空だと登録できない" do
         @user.nickname = ''
         @user.valid?
@@ -71,11 +71,21 @@ describe User, type: :model do
         @user.valid?
         expect(@user.errors.full_messages).to include("Not zenkaku")
       end
-      it "surname_katakanaとname_katakanaでそれぞれ必須である" do
+      it "surname_katakanaとname_katakanaがカタカナでなけれがいけない" do
         @user.surname_katakana = "いのう"
         @user.name_katakana = "ただたか"
         @user.valid?
         expect(@user.errors.full_messages).to include("Not katakana")
+      end
+      it"surname_katakanaは空ではいけない"do
+        @user.surname_katakana = ''
+        @user.valid?
+        expect(@user.error.full_message).to include("Nickname can't be blank")
+      end
+      it"name_katakanaは空ではいけない"do
+        @user.name_katakana = ''
+        @user.valid?
+        expect(@user.error.full_message).to include("Nickname can't be blank")
       end
     end
  end
