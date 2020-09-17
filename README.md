@@ -29,7 +29,7 @@
 | status_id               | integer | null: false |
 | shipping_charges_id     | integer | null: false |
 | shipping_origin_area_id | integer | null: false |
-| days_until_shipping     | integer | null: false |
+| days_until_shipping_id  | integer | null: false |
 | user_id                 | integer | null: false , foreign_key: true |
 
 
