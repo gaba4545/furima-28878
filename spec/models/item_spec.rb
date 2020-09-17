@@ -14,47 +14,47 @@ describe Item, type: :model do
 
     ]context '商品出品がうまくいかない時' do
       it "imageが空だと出品できない" do
-        @user.nickname = ''
+        @user.image = ''
         @user.valid?
         expect(@user.error.full_message).to include("Image can't be blank")
       end
       it "nameが空だと出品できない" do
-        @user.email = ''
+        @user.name = ''
         @user.valid?
         expect(@user.error.full_message).to include("Name can't be blank")
       end
       it "explanationが空だと出品できない" do
-        @user.password = ''
+        @user.explanation = ''
         @user.valid?
         expect(@user.error.full_message).to include("Explanation can't be blank")
       end
       it "priceが空だと出品できない" do
-        @user.nickname = ''
+        @user.price = ''
         @user.valid?
         expect(@user.error.full_message).to include("Price can't be blank")
       end
       it "categoryが空だと出品できない" do
-        @user.nickname = ''
+        @user.category = ''
         @user.valid?
         expect(@user.error.full_message).to include("Category can't be blank")
       end
       it "statusが空だと出品できない" do
-        @user.nickname = ''
+        @user.status = ''
         @user.valid?
         expect(@user.error.full_message).to include("Status can't be blank")
       end
       it "shipping_chargesが空だと出品できない" do
-        @user.nickname = ''
+        @user.shipping_charges = ''
         @user.valid?
         expect(@user.error.full_message).to include("Shipping_charges can't be blank")
       end
       it "shipping_origin_areaが空だと出品できない" do
-        @user.nickname = ''
+        @user.shipping_origin_area = ''
         @user.valid?
         expect(@user.error.full_message).to include("Shipping_origin_area can't be blank")
       end
       it "days_until_shippingが空だと出品できない" do
-        @user.nickname = ''
+        @user.days_until_shipping = ''
         @user.valid?
         expect(@user.error.full_message).to include("Days_until_shipping can't be blank")
       end
@@ -64,7 +64,7 @@ describe Item, type: :model do
         expect(@user.error.full_message).to include("Name is too long")
       end
       it "priceは半角数字でないと出品できない" do
-        @user.password = "1１"
+        @user.price = "1１"
         @user.valid?
         expect(@user.errors.full_messages).to include("Price can't be blank")
       end
