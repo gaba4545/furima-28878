@@ -1,7 +1,7 @@
 class ProductListsController < ApplicationController
 
   def index
-    @product_lists = Product_lists.order
+    @product_lists = Product_lists.order(product_list_params)
   end
 
   def create
