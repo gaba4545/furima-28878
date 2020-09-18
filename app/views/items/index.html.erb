@@ -121,14 +121,18 @@
   <%# //FURIMAの特徴 %>
 
   <%# 商品一覧 %>
-  <div class='product_lists'>
+  <div class='item-contents'>
     <h2 class='title'>ピックアップカテゴリー</h2>
     <%= link_to '新規投稿商品', "#", class: "subtitle" %>
     <ul class='item-lists'>
 
       <%# 商品のインスタンス変数になにか入っている場合、中身のすべてを展開できるようにしましょう %>
       <li class='list'>
-        <%= link_to "/product/list" do %>
+<<<<<<< Updated upstream
+        <%= link_to "/product/list(.:format)" do %>
+=======
+        <%= link_to "#" do %>
+>>>>>>> Stashed changes
         <div class='item-img-content'>
           <%= image_tag "item-sample.png", class: "item-img" %>
 

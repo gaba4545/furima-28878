@@ -1,7 +1,7 @@
 class ProductListsController < ApplicationController
 
   def index
-    @product_lists = Product_lists.all
+    @product_lists = Product_lists.order
   end
 
   def create
