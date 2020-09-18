@@ -5,7 +5,7 @@ class ProductListsController < ApplicationController
   end
 
   def create
-    @product_list = Item.new(product_list_params)
+    @product_list = item.all()
      if @product_list.valid?
       @product_list.save
       redirect_to root_path
