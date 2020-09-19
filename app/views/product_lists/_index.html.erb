@@ -1,0 +1,11 @@
+<div class="contents row">
+  <% @product_lists.each do |product_lists| %>
+  <%= render partial: "item", locals: { item: item } %>
+    <div class="content_post" style="background-image: url(<%= product_lists.image %>);">
+      <p><%= product_lists.text %></p>
+      <span class="name">
+        <%= product_lists.name %>
+      </span>
+    </div>
+  <% end %>
+</div>
