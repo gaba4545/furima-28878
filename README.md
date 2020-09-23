@@ -64,4 +64,4 @@
 
 - belongs_to :user
 - has_one :addresses
-- belong_to :item
+- belongs_to :item
