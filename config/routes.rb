@@ -4,5 +4,5 @@ Rails.application.routes.draw do
   root 'items#index'
   resources :items
   resources :users, only: [:edit, :update]
-  resources :product_lists, only: [:index]
+  resources :product_lists, only: [:index, :show]
 end
