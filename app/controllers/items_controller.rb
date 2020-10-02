@@ -19,6 +19,14 @@ class ItemsController < ApplicationController
      end
   end
 
+  def destroy
+    @item = Item.find(params[:id])
+     if @item.user_id == current_user.id
+      @item.destroy
+      redirect_to root_path
+     end
+   end
+
   def update
     @item.update(item_params)
     if @item.valid?
