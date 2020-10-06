@@ -40,14 +40,15 @@
 
 ## addresses テーブル
 
-| Column              | Type    | Option      |
-| ------------------- | ------- | ----------- |
-| postal_code         | string  | null: false |
-| municipality        | integer | null: false |
-| building_number     | string  |
-| address             | string  | null: false |
-| phone_number        | string  | null: false |
-| purchase_history_id | integer | null: false , foreign_key: true |
+| Column               | Type    | Option      |
+| -------------------  | ------- | ----------- |
+| postal_code          | string  | null: false |
+| shipping_origin_area | integer | null: false |
+| municipality         | integer | null: false |
+| building_number      | string  |
+| address              | string  | null: false |
+| phone_number         | string  | null: false |
+| purchase_history_id  | integer | null: false , foreign_key: true |
 
 ### Association
 
