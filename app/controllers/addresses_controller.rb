@@ -2,6 +2,7 @@ class AddressesController < ApplicationController
 
   def index
     @address = Address.new
+    @item = Item.find(params[:item_id])
   end
 
   def create
@@ -20,5 +21,6 @@ class AddressesController < ApplicationController
     params.require(:address).permit(:price)
   end
 
+  
 
 end
