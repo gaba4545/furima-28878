@@ -51,9 +51,6 @@ describe Address, type: :model do
         @user.valid?
         expect(@user.error.full_message).to include("phone_number is not invalid")
       end
-      it "priceとtokenがあれば保存ができること" do
-        expect(@user).to be_valid
-      end
       it "tokenが空では登録できないこと" do
         @address.token = nil
         @address.valid?
