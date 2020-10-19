@@ -6,5 +6,5 @@ Rails.application.routes.draw do
    resources :addresses, only:[:create ,:index]
   end
   resources :users, only: [:edit, :update]
-  resources :product_lists, only: [:index, :show]
+  resources :cards, only: [:new, :create]
 end

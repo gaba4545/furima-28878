@@ -12,4 +12,6 @@ class User < ApplicationRecord
           validates :surname_zenkaku,:name_zenkaku, format: {with:/\A[一-龥ぁ-ん]/}
           #surname_katakanaとname_katakanaでそれぞれ必須
           validates :surname_katakana,:name_katakana, format: {with:/[ァ-ンヴー]/}
+
+  has_one :address, dependent: :destroy
 end
