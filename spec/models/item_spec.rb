@@ -48,10 +48,10 @@ describe Item, type: :model do
         @user.valid?
         expect(@user.error.full_message).to include("Shipping_charges can't be blank")
       end
-      it "shipping_origin_areaが空だと出品できない" do
-        @user.shipping_origin_area = ''
+      it "shipping_origin_area_idが空だと出品できない" do
+        @user.shipping_origin_area_id = ''
         @user.valid?
-        expect(@user.error.full_message).to include("Shipping_origin_area can't be blank")
+        expect(@user.error.full_message).to include("Shipping_origin_area_id can't be blank")
       end
       it "days_until_shippingが空だと出品できない" do
         @user.days_until_shipping = ''
