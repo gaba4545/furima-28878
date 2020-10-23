@@ -1,9 +1,10 @@
 class AddressesController < ApplicationController
+  before_action :authenticate_user!, only:[:index]
   before_action :setup_item, only:[:index, :create, :pay_item]
-
+  
   def index
     @address = UserForm.new
-    redirect_to root_path if current_user.id == @item.user_id || @item.purchase_history!= nil
+    redirect_to root_path if @item.purchase_history != nil
   end
 
   def create
