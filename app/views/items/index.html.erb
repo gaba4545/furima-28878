@@ -187,4 +187,8 @@
 <%= render "shared/footer" %> 
 
 <%# 商品が売れていればsold outの表示 %>
+  <%= -if product.purchaser_id.present? %>
+          <%=.items-box_photo__sold%>
+            <%=.items-box_photo__sold__inner%>
+              <%=SOLD%>%
 <%# //商品が売れていればsold outの表示 %>
