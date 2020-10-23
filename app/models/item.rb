@@ -7,7 +7,7 @@ class Item < ApplicationRecord
   belongs_to_active_hash :days_until_shipping
 
   belongs_to :user
-
+  has_one :purchase_history
   has_one_attached :image
 
   with_options presence: true do

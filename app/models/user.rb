@@ -14,4 +14,5 @@ class User < ApplicationRecord
           validates :surname_katakana,:name_katakana, format: {with:/[ァ-ンヴー]/}
 
   has_one :address, dependent: :destroy
+  has_one :purchase_history
 end

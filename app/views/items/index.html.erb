@@ -126,6 +126,11 @@
     <%= link_to '新規投稿商品', "/items/:show", class: "subtitle" %>
     <ul class='item-lists'>
 
+
+  <%# 商品が売れていればsold outの表示 %>
+    
+
+
     <% if @items.present?%>
       <%# 商品のインスタンス変数になにか入っている場合、中身のすべてを展開できるようにしましょう %>
       <%@items.each do |item|%>
@@ -133,6 +138,11 @@
           <%= link_to item_path(item.id) do %>
           <div class='item-img-content'>
             <%= image_tag item.image, class: "item-img" %>
+            <% if item.purchase_history != nil %>
+              <div class='sold-out'>
+                <span>Sold Out!!</span>
+              </div>
+            <%end%>
           </div>
           <div class='item-info'>
             <h3 class='item-name'>
@@ -185,10 +195,4 @@
   </a>
 </div>
 <%= render "shared/footer" %> 
-
-<%# 商品が売れていればsold outの表示 %>
-  <%= -if product.purchaser_id.present? %>
-          <%=.items-box_photo__sold%>
-            <%=.items-box_photo__sold__inner%>
-              <%=SOLD%>%
 <%# //商品が売れていればsold outの表示 %>

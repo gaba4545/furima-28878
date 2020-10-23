@@ -3,7 +3,7 @@ class AddressesController < ApplicationController
 
   def index
     @address = UserForm.new
-    redirect_to root_path unless current_user.id != @item.user_id
+    redirect_to root_path if current_user.id == @item.user_id || @item.purchase_history!= nil
   end
 
   def create
